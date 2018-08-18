@@ -10,13 +10,13 @@ else
 	echo " zeroth_korean.tar.gz already exist"
 fi
 
-if [ ! -d ./speechDATA ]; then
+if [ ! -d ./$1 ]; then
 	echo "2. Untar data"
-	mkdir -p ./speechDATA
-	tar -zxvf zeroth_korean.tar.gz -C speechDATA
+	mkdir -p ./$1
+	tar -zxvf zeroth_korean.tar.gz -C $1
 	
 	echo "3. put LM fils into daa/local/lm"
-	mv speechDATA/zeroth* data/local/lm
+	mv $1/zeroth* data/local/lm
 fi
 
 exit 0
