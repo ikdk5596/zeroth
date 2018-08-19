@@ -30,7 +30,7 @@ startTime=$(date +'%F-%H-%M')
 echo "started at" $startTime
 
 # download the audio data and LMs
-local/download_from_openslr.sh
+local/download_from_openslr.sh $data
 
 # format the data as Kaldi data directories
 for part in train_data_01 test_data_01; do
